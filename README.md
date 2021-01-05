@@ -78,17 +78,17 @@ Entering "compare" mode will, by default, visualize the change in emissions from
 ![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/Compare.gif)
 
 		// Compute difference and find negatives
-      	for (i = 0; i < yearTwo.length; i++) {
-        	for (j = 0; j < yearOne.length; j++) {
-          		if (yearTwo[i].country == yearOne[j].country) {
-            		yearDiff[i].value = yearTwo[i].value - yearOne[j].value;
-          		}
-        	}
-        	if (yearDiff[i].value < 0) {
-          		indexesNegative[i] = 1;
-          		yearDiff[i].value = Math.abs(yearDiff[i].value);
-        	}
-      	}
+		for (i = 0; i < yearTwo.length; i++) {
+			for (j = 0; j < yearOne.length; j++) {
+				if (yearTwo[i].country == yearOne[j].country) {
+				yearDiff[i].value = yearTwo[i].value - yearOne[j].value;
+				}
+			}
+			if (yearDiff[i].value < 0) {
+				indexesNegative[i] = 1;
+				yearDiff[i].value = Math.abs(yearDiff[i].value);
+			}
+		}
 
 Change this by using the text box. For example, valuable insights can be found by visualizing the change in emissions between 2000 and 2010, or 2005 and 2015. Green circles represent a decrease in emissions, red circles represent and increase in emissions.
 
