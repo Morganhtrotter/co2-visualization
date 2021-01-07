@@ -1,3 +1,14 @@
+Front-End Languages and Libraries used:
+D3.js
+JavaScript
+HTML5
+CSS3
+
+Back-End Languages and Technologies used:
+Node.js
+Express.js
+NPM
+
 What is this?
 
 During my capstone course at UCSC, four group members and I set out to learn the javascript library D3.js and create unique, interactive visualizations surrounding climate change. This is my contribution to the project. After gathering and curating data on each country's carbon dioxide emissions from The Global Carbon Atlas Organization, I used D3.js to bind this data to the radius of a circle and group each circle by continent. The bigger the circle, the more carbon dioxide emissions by that country for that particular year.
@@ -96,7 +107,7 @@ Change this by using the text box. For example, valuable insights can be found b
 
 Loading the data:
 
-Once I had my curated data in a .csv file, I used d3.csv to load my data into an array:
+Once I had my curated data in a CSV file, I used d3.csv to load my data into an array:
 
 		d3.csv('MtCO2Emissions.csv', function(error, data) {
 			if (error) {
@@ -116,7 +127,7 @@ And then filtered that array for the particular year being visualized:
       		...
       	}
 
-I used D3.max() to find the largest amount of emissions for one year in all of the years of data I obtained, and scaled the circles' radii exponentially:
+I used d3.max() to find the largest amount of emissions for one year in all of the years of data I obtained, and scaled the circles' radii exponentially:
 
 		var scaleRadius = d3.scalePow().exponent(0.5).domain([0, d3.max(data, function(d) {
         	return +d[columnForRadius];
